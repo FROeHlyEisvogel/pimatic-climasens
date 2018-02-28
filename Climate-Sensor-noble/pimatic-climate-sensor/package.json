@@ -1,0 +1,36 @@
+{
+  "name": "pimatic-climate-sensor",
+  "description": "Gets information from BLE ClimateSensors",
+  "author": "Samuel Mueller <s.mueller.es@gmail.com>",
+  "main": "climate-sensor",
+  "files": [
+    "climate-sensor.coffee",
+    "README.md",
+    "climate-sensor-config-schema.coffee",
+    "device-config-schema.coffee",
+    "LICENSE"
+  ],
+  "license": "GPL-2.0",
+  "version": "0.0.9",
+  "homepage": "https://github.com/eisvogel/pimatic-climate-sensor",
+  "configSchema": "climate-sensor-config-schema.coffee",
+  "peerDependencies": {
+    "pimatic": ">=0.8.0 <1.0.0"
+  },
+  "engines": {
+    "node": ">0.8.x",
+    "npm": ">1.1.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eisvogel/pimatic-climate-sensor.git"
+  },
+  "keywords": [
+    "pimatic",
+	"ble",
+	"climate"
+  ],
+  "bugs": {
+    "url": "https://github.com/eisvogel/pimatic-climate-sensor/issues"
+  }
+}
