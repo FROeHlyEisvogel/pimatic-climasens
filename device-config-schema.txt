@@ -1,0 +1,17 @@
+module.exports ={
+  title: "pimatic-ClimaSens device config schemas"
+  ClimaSensDevice: {
+    title: "ClimaSens config options"
+    type: "object"
+    extensions: ["xLink", "xAttributeOptions"]
+    properties:
+      address:
+        description: "address of the ClimaSens to connect"
+        type: "string"
+		default: "xx:xx:xx:xx:xx:xx"
+      interval:
+        description: "Interval until presence lost"
+        type: "number"
+        default: 60000
+  }
+}
