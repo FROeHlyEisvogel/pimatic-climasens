@@ -1,4 +1,4 @@
-pimatic-climate-sensor
+pimatic-ClimaSens
 ====================
 
 Pimatic Plugin that monitors BLE-ClimateSensors.
