@@ -1,7 +1,7 @@
 pimatic-ClimaSens
 ====================
 
-Pimatic Plugin that monitors BLE-ClimateSensors.
+Pimatic Plugin that monitors Smart-ClimaSense.
 
 Configuration
 -------------
