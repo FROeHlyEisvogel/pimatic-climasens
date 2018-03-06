@@ -26,7 +26,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/FROeHlyEisvogel/Pimatic-ClimaSens.git"
+    "url": "git+https://github.com/FROeHlyEisvogel/pimatic-climasens.git"
   },
   "keywords": [
     "pimatic",
@@ -34,6 +34,6 @@
 	"climate"
   ],
   "bugs": {
-    "url": "https://github.com/FROeHlyEisvogel/Pimatic-ClimaSens/issues"
+    "url": "https://github.com/FROeHlyEisvogel/pimatic-climasens/issues"
   }
 }
