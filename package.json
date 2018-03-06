@@ -14,8 +14,8 @@
   "version": "0.0.1",
   "homepage": "https://github.com/FROeHlyEisvogel/Pimatic-ClimaSens",
   "configSchema": "clima-sens-config-schema.coffee",
-  "Dependencies": {
-    npm install noble --save
+  "dependencies": {
+    "noble": "^1.8.1"
   },
   "peerDependencies": {
     "pimatic": ">=0.8.0"
