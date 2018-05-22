@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "clima-sens-config-schema.js",
+  "sourceRoot": "",
+  "sources": [
+    "clima-sens-config-schema.coffee"
+  ],
+  "names": [],
+  "mappings": "AAAA,MAAM,CAAC,OAAP,GAAiB;EACf,KAAA,EAAO,mBADQ;EAEf,IAAA,EAAM,QAFS;EAGf,UAAA,EAAY;IACV,KAAA,EACE;MAAA,WAAA,EAAa,uEAAb;MACA,IAAA,EAAM,SADN;MAEA,CAAA,OAAA,CAAA,EAAS,KAFT;KAFQ;IAKV,kBAAA,EACE;MAAA,WAAA,EAAa,yBAAb;MACA,IAAA,EAAM,QADN;MAEA,CAAA,OAAA,CAAA,EAAS,MAFT;KANQ;GAHG"
+}

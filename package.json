@@ -1,8 +1,8 @@
 {
-  "name": "pimatic-ClimaSens",
+  "name": "pimatic-climasens",
   "description": "Gets information from Smart-ClimaSens",
   "author": "Samuel Mueller <s.mueller.es@gmail.com>",
-  "main": "ClimaSens",
+  "main": "clima-sens",
   "files": [
     "clima-sens.coffee",
     "README.md",
@@ -11,9 +11,12 @@
     "LICENSE"
   ],
   "license": "GPL-3.0",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "homepage": "https://github.com/FROeHlyEisvogel/Pimatic-ClimaSens",
   "configSchema": "clima-sens-config-schema.coffee",
+  "dependencies": {
+    "noble": "^1.8.1"
+  },
   "peerDependencies": {
     "pimatic": ">=0.8.0"
   },
@@ -23,7 +26,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/FROeHlyEisvogel/Pimatic-ClimaSens.git"
+    "url": "git+https://github.com/FROeHlyEisvogel/pimatic-climasens.git"
   },
   "keywords": [
     "pimatic",
@@ -31,6 +34,6 @@
 	"climate"
   ],
   "bugs": {
-    "url": "https://github.com/FROeHlyEisvogel/Pimatic-ClimaSens/issues"
+    "url": "https://github.com/FROeHlyEisvogel/pimatic-climasens/issues"
   }
 }

@@ -1,5 +1,5 @@
 module.exports = {
-  title: "Pimatic-ClimaSens"
+  title: "pimatic-climasens"
   type: "object"
   properties: {
     debug:
