@@ -28,10 +28,17 @@
       
       deviceConfigDef = require('./device-config-schema')
       
+<<<<<<< HEAD
       @framework.deviceManager.registerDeviceClass('ClimateSensor', {
         configDef: deviceConfigDef.ClimateSensor,
         createCallback: (config, lastState) =>
           device = new ClimateSensor(config, @, lastState)
+=======
+      @framework.deviceManager.registerDeviceClass('ClimaSens', {
+        configDef: deviceConfigDef.ClimaSens,
+        createCallback: (config, lastState) =>
+          device = new ClimaSens(config, @, lastState)
+>>>>>>> 4995ef4bb2b6fec5178d9fd946c74c37a79c7974
           @addToScan config.address, device
           return device
       })
@@ -44,17 +51,28 @@
           if @discoverMode is true
             if peripheral.address.toUpperCase() not in @discoveredPeripherals
               if not @devices[peripheral.address.toUpperCase()]
+<<<<<<< HEAD
               #if peripheral.address.toUpperCase() not in @devices
+=======
+>>>>>>> 4995ef4bb2b6fec5178d9fd946c74c37a79c7974
                 @discoveredPeripherals.push peripheral.address.toUpperCase()
 
                 env.logger.debug 'Sensor %s found', peripheral.address.toUpperCase()
                 config = {
+<<<<<<< HEAD
                   class: 'ClimateSensor',
+=======
+                  class: 'ClimaSens',
+>>>>>>> 4995ef4bb2b6fec5178d9fd946c74c37a79c7974
                   name: peripheral.address.toUpperCase(),
                   address: peripheral.address.toUpperCase()
                 }
                 @framework.deviceManager.discoveredDevice(
+<<<<<<< HEAD
                   'pimatic-climate-sensor', peripheral.advertisement.localName + ' [' + peripheral.address.toUpperCase() + '] -> RSSI: ' + peripheral.rssi + 'dBm', config
+=======
+                  'pimatic-ClimaSens', peripheral.advertisement.localName + ' [' + peripheral.address.toUpperCase() + '] -> RSSI: ' + peripheral.rssi + 'dBm', config
+>>>>>>> 4995ef4bb2b6fec5178d9fd946c74c37a79c7974
                 )
           else return
 
@@ -78,7 +96,11 @@
         delete @devices[address]
         env.logger.info address, 'removed'
 
+<<<<<<< HEAD
   class ClimateSensor extends env.devices.Device
+=======
+  class ClimaSens extends env.devices.Device
+>>>>>>> 4995ef4bb2b6fec5178d9fd946c74c37a79c7974
     attributes:
       light:
         description: 'The measured brightness'
@@ -194,6 +216,10 @@
     getPresence: -> Promise.resolve @_presence
 
   
+<<<<<<< HEAD
   env.devices.ClimateSensor = ClimateSensor
+=======
+  env.devices.ClimaSens = ClimaSens
+>>>>>>> 4995ef4bb2b6fec5178d9fd946c74c37a79c7974
   
   return new ClimateSensorPlugin

@@ -1,5 +1,9 @@
 module.exports ={
+<<<<<<< HEAD
   title: "pimatic-ClimaSens config schemas"
+=======
+  title: "pimatic-climasens config schemas"
+>>>>>>> 4995ef4bb2b6fec5178d9fd946c74c37a79c7974
   ClimaSens: {
     title: "ClimaSens config options"
     type: "object"
