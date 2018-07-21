@@ -51,30 +51,15 @@ module.exports = (env) ->
       
       deviceConfigDef = require('./device-config-schema')
       
-<<<<<<< HEAD
       @framework.deviceManager.registerDeviceClass('ClimaSens', {
         configDef: deviceConfigDef.ClimaSens,
         createCallback: (config, lastState) =>
           device = new ClimaSens(config, @, lastState)
-=======
-<<<<<<< HEAD
-      @framework.deviceManager.registerDeviceClass('ClimateSensor', {
-        configDef: deviceConfigDef.ClimateSensor,
-        createCallback: (config, lastState) =>
-          device = new ClimateSensor(config, @, lastState)
-=======
-      @framework.deviceManager.registerDeviceClass('ClimaSens', {
-        configDef: deviceConfigDef.ClimaSens,
-        createCallback: (config, lastState) =>
-          device = new ClimaSens(config, @, lastState)
->>>>>>> 4995ef4bb2b6fec5178d9fd946c74c37a79c7974
->>>>>>> cc96c152407c48a8256fe45762b5cd70fc7f3fda
           @addToScan config.address, device
           return device
       })
       
       @framework.deviceManager.on 'discover', (eventData) =>
-<<<<<<< HEAD
           @framework.deviceManager.discoverMessage 'pimatic-climate-sensor', 'Scanning for sensors'
           @discoveredPeripherals = [];
           @discoverMode = true
@@ -95,39 +80,6 @@ module.exports = (env) ->
                       'pimatic-climasens', '[' + BLEdata.address + '] ', config
                     )
             else return
-=======
-        @framework.deviceManager.discoverMessage 'pimatic-climate-sensor', 'Scanning for sensors'
-        @discoverMode = true
-        
-        @noble.on 'discover', (peripheral) =>
-          if @discoverMode is true
-            if peripheral.address.toUpperCase() not in @discoveredPeripherals
-              if not @devices[peripheral.address.toUpperCase()]
-<<<<<<< HEAD
-              #if peripheral.address.toUpperCase() not in @devices
-=======
->>>>>>> 4995ef4bb2b6fec5178d9fd946c74c37a79c7974
-                @discoveredPeripherals.push peripheral.address.toUpperCase()
-
-                env.logger.debug 'Sensor %s found', peripheral.address.toUpperCase()
-                config = {
-<<<<<<< HEAD
-                  class: 'ClimateSensor',
-=======
-                  class: 'ClimaSens',
->>>>>>> 4995ef4bb2b6fec5178d9fd946c74c37a79c7974
-                  name: peripheral.address.toUpperCase(),
-                  address: peripheral.address.toUpperCase()
-                }
-                @framework.deviceManager.discoveredDevice(
-<<<<<<< HEAD
-                  'pimatic-climate-sensor', peripheral.advertisement.localName + ' [' + peripheral.address.toUpperCase() + '] -> RSSI: ' + peripheral.rssi + 'dBm', config
-=======
-                  'pimatic-ClimaSens', peripheral.advertisement.localName + ' [' + peripheral.address.toUpperCase() + '] -> RSSI: ' + peripheral.rssi + 'dBm', config
->>>>>>> 4995ef4bb2b6fec5178d9fd946c74c37a79c7974
-                )
-          else return
->>>>>>> cc96c152407c48a8256fe45762b5cd70fc7f3fda
 
           setTimeout =>
             @discoverMode = false
@@ -143,55 +95,10 @@ module.exports = (env) ->
       if @devices[address]
         delete @devices[address]
         env.logger.info address, 'removed'
-<<<<<<< HEAD
   
   
   class ClimaSens extends env.devices.Device
     
-=======
-
-<<<<<<< HEAD
-  class ClimateSensor extends env.devices.Device
-=======
-  class ClimaSens extends env.devices.Device
->>>>>>> 4995ef4bb2b6fec5178d9fd946c74c37a79c7974
-    attributes:
-      light:
-        description: 'The measured brightness'
-        type: 'number'
-        unit: 'lx'
-        acronym: ' Light:'
-      temperature:
-        description: 'The measured temperature'
-        type: 'number'
-        unit: '°C'
-        acronym: ' Temp:'
-      humidity:
-        description: 'The measured moisture level'
-        type: 'number'
-        unit: '%'
-        acronym: ' Humidity:'
-      pressure:
-        description: 'Relative air pressure'
-        type: 'number'
-        unit: 'hPa'
-        acronym: ' Pressure:'
-      battery:
-        description: 'Battery status'
-        type: 'number'
-        unit: 'V'
-        acronym: ' Battery:'
-      contact:
-        description: 'Contact status'
-        type: 'boolean'
-        lables: ['closed', 'open']
-        acronym: ' Contact:'
-      presence:
-        description: 'Presence of the device'
-        type: 'boolean'
-        lables: ['present', 'absent']
-
->>>>>>> cc96c152407c48a8256fe45762b5cd70fc7f3fda
     constructor: (config, @plugin, lastState) ->
       if !@config || Object.keys(@config).length == 0
         @config = config
@@ -340,14 +247,6 @@ module.exports = (env) ->
     getPresence: -> Promise.resolve @_presence
 
   
-<<<<<<< HEAD
   env.devices.ClimaSens = ClimaSens
-=======
-<<<<<<< HEAD
-  env.devices.ClimateSensor = ClimateSensor
-=======
-  env.devices.ClimaSens = ClimaSens
->>>>>>> 4995ef4bb2b6fec5178d9fd946c74c37a79c7974
->>>>>>> cc96c152407c48a8256fe45762b5cd70fc7f3fda
   
   return new ClimaSensPlugin
